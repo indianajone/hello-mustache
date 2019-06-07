@@ -10,7 +10,7 @@ module.exports = {
   mode: 'development',
   entry: './src/main.js',
   output: {
-    filename: '[name].[chunkhash].js',
+    filename: 'js/[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist')
   },
   devServer: {
