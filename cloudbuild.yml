@@ -1,9 +1,0 @@
-steps:
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['install', '--prod']
-
-- name: 'gcr.io/cloud-builders/npm'
-  args: ['build']
-
-- name: 'gcr.io/[PROJECT_ID]/firebase'
-  args: [ 'deploy', '-P', 'hellomustache-c4156', '--token', '[FIREBASE_TOKEN]']
