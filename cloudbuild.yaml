@@ -7,6 +7,7 @@ steps:
 
 - name: 'gcr.io/hellomustache-c4156/firebase'
   args: [ 'deploy', '-P', 'hellomustache-c4156', '--token', '[FIREBASE_TOKEN]']
+  secretEnv: ['FIREBASE_TOKEN']
   
 secrets:
 - kmsKeyName: 'projects/hellomustache-c4156/locations/global/keyRings/cloudbuilder/cryptoKeys/firebase-token'
