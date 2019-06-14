@@ -7,7 +7,7 @@ steps:
 
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
-  args: ['echo', '$$FIREBASE_TOKEN']
+  args: ['-c', 'echo', '$$FIREBASE_TOKEN']
   secretEnv: ['FIREBASE_TOKEN']
 
 - name: 'gcr.io/$PROJECT_ID/firebase'
@@ -17,4 +17,4 @@ steps:
 secrets:
 - kmsKeyName: 'projects/hellomustache-c4156/locations/global/keyRings/cloudbuilder/cryptoKeys/firebase-token'
   secretEnv:
-    FIREBASE_TOKEN: 'CiQA1G4bOs3iuKeou44StAKj3Btncv8TEqobVvxpNUmWI12yUn0SVgCP1voIM6TlSC9eJ2wjCAO/7kIuDevvonj6tr/dxN9Vu/whY3K1HZPQgohm9r843LVFP0e/esw8jA3FIsQlx5j6MTOky3t2yVf2+lTxFse2MDPoLpKC'
+    FIREBASE_TOKEN: CiQA1G4bOs3iuKeou44StAKj3Btncv8TEqobVvxpNUmWI12yUn0SVgCP1voIM6TlSC9eJ2wjCAO/7kIuDevvonj6tr/dxN9Vu/whY3K1HZPQgohm9r843LVFP0e/esw8jA3FIsQlx5j6MTOky3t2yVf2+lTxFse2MDPoLpKC
