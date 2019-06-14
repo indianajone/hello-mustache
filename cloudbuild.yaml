@@ -7,11 +7,11 @@ steps:
 
 - name: 'gcr.io/cloud-builders/docker'
   entrypoint: 'bash'
-  args: ['-c', 'echo', '$$FIREBASE_TOKEN']
+  args: ['-c', 'echo', '[FIREBASE_TOKEN]']
   secretEnv: ['FIREBASE_TOKEN']
 
 - name: 'gcr.io/$PROJECT_ID/firebase'
-  args: ['deploy', '-P=$PROJECT_ID', '--token=$$FIREBASE_TOKEN', '--debug']
+  args: ['deploy', '-P', '$PROJECT_ID', '--token', '$$FIREBASE_TOKEN', '--debug']
   secretEnv: ['FIREBASE_TOKEN']
   
 secrets:
