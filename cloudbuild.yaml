@@ -5,7 +5,8 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'build']
 
-- name: ubundu
+- name: 'gcr.io/cloud-builders/docker'
+  entrypoint: 'bash'
   args: ['echo', '$$FIREBASE_TOKEN']
   secretEnv: ['FIREBASE_TOKEN']
 
