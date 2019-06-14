@@ -6,7 +6,7 @@ steps:
   args: ['run', 'build']
 
 - name: 'gcr.io/$PROJECT_ID/firebase'
-  args: ['deploy', '-P', '$PROJECT_ID', '--token', '1/12ixNYFT0LqaRKgQCBQ8gD8FCMSJpTk-vXeGn_WWlo0', '--debug']
+  args: ['deploy', '-P', '$PROJECT_ID', '--token', '$${FIREBASE_TOKEN}', '--debug']
   secretEnv: ['FIREBASE_TOKEN']
   
 secrets:
