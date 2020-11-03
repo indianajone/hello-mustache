@@ -30,6 +30,9 @@
     "webpack-dev-server": "^3.4.1"
   },
   "dependencies": {
+    "@sentry/browser": "^5.27.2",
+    "@sentry/integrations": "^5.27.2",
+    "@sentry/tracing": "^5.27.2",
     "vue": "^2.6.10"
   }
 }
