@@ -1,8 +1,11 @@
 <template>
-  <a :class="$style['contact-me']" :href="linkToMail">{{email}}</a>
+  <a :class="$style['contact-me']" :href="linkToMail">{{address}}</a>
 </template>
 
 <script>
+import {
+  computed
+} from 'vue';
 export default {
   name: 'contact-me',
   props: {
@@ -11,26 +14,27 @@ export default {
       required: true,
     },
   },
-
-  computed: {
-    linkToMail() {
-      return `mailto:${this.email}`;
-    },
+  setup({
+    email
+  }) {
+    return {
+      address: computed(() => email.replace('@', '[at]')),
+      linkToMail: computed(() => `mailto:${email}`),
+    };
   },
 };
 </script>
 
 <style lang="scss" module>
-  .contact-me,
-  .contact-me:focus,
-  .contact-me:visited {
-    color: #444; 
-    text-decoration: none;
-  }
+.contact-me,
+.contact-me:focus,
+.contact-me:visited {
+  color: #444;
+  text-decoration: none;
+}
 
-  .contact-me:hover {
-    color: currentColor;
-    text-decoration: underline;
-  }
+.contact-me:hover {
+  color: currentColor;
+  text-decoration: underline;
+}
 </style>
-

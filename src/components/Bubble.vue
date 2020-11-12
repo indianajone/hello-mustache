@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style lang="scss" module>
-  @import "../assets/styles/variables";
+  @import "../assets/scss/variables";
   
   .bubble {
     border: 0.125em solid $black;
