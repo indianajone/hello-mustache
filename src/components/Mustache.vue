@@ -49,7 +49,9 @@
       width: 100%;
       height: 200%;
       border: 0 solid transparent;
-      border-bottom: $size solid currentColor;
+      border-bottom-style: solid;
+      border-bottom-width: $size;
+      border-bottom-color: currentColor;
     }
 
     &::before {
