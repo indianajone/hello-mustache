@@ -5,7 +5,7 @@
 </template>
 
 <style lang="scss" module>
-@import "../assets/styles/variables";
+@import "../assets/scss/variables";
 
 .mustache {
   color: $black;
