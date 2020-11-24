@@ -1,10 +1,12 @@
 {
   "name": "hello-mustache",
   "version": "2.0.0",
+  "homepage": "https://hellomustache.com",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
   },
+  "license": "UNLICENSED",
   "dependencies": {
     "vue": "^3.0.2"
   },
